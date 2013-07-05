@@ -1,2 +1,8 @@
-#!/usr/bin/env sh
-ruby -run -e httpd . -p 8000
+#!/usr/bin/env ruby
+require 'webrick'
+root = ARGV[1] || '.'
+server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => root
+trap 'INT' do
+  server.shutdown
+end
+server.start
