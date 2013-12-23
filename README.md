@@ -5,7 +5,7 @@
 
 ```shell
 gem install rubyweb
-rubyweb
+rw
 ```
 
 ## Use
@@ -13,13 +13,13 @@ rubyweb
 Just type
 
 ```shell
-rubyweb [document_root]
+rw [document_root]
 ```
 
 at the command line. For example:
 
 ```shell
-rubyweb ~/web/
+rw ~/web/
 ```
 
 Will serve pages from `$HOME/web`.
